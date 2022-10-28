@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App-Container'>
+      
+        <header>
+          <NavBar />
+        </header>
+      
+        <div>
+          <ItemListContainer greeting='Tenemos a su disposicion muebles estandarizados y tambien a medida totalmente personalizados a su necesidad y gusto, contactenos por correo electronico o WhastApp para brindarle el presupuesto que desee.'/>
+        </div>
+
     </div>
   );
 }

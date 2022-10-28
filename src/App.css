@@ -1,38 +1,159 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #F7F8F3;
+  color: #012C3D;
+}
+
+.App-Container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.NavbarContainer {
+  position: relative;
+  z-index: 1000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+.logo {
+  max-width: 200px;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  
+}
+
+.logo h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-left: 20px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+}
+
+.nav .navMenu {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navItem {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin: 35px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navItem:hover {
+  color: #012c3d73;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navCategories {
+  display: none;
+  float: left;
+  overflow: hidden;
+  position: absolute;
+  background-color: #F7F8F3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .navCategories {
+  display: block;
+}
+
+.navCategories .navItem {
+  color: #012C3D;
+}
+
+.navCategories .navItem:hover {
+  color: #012C3D73;
+}
+
+.active {
+  border-bottom: 1px solid #012C3D;
+  padding-bottom: 5px;
+  border-top: 1px solid #012C3D;
+  padding-top: 4px;
+}
+
+.cartIcon {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  align-content: center;
+  padding: 0 20px
 }
 
-.App-link {
-  color: #61dafb;
+.cartIcon img {
+  width: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cartNotification {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #012C3D;
+  color: #f7f8f3;
+  padding: 7px;
+  border-radius: 50%;
+  margin-left: 10px;
+
+}
+
+.banner-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  bottom: 0;
+  margin-top: 100px;
+}
+
+.title-greeting {
+  margin: 20px;
+  padding: 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-greeting {
+  font-size: 1.8rem;
+  padding: 10px 80px;
+  line-height: 1.4;
+  text-align: center;
 }
