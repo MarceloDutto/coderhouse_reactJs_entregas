@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/coderhouse_reactJs_entregas/static/css/main.9c20d2cb.css",
+    "main.js": "/coderhouse_reactJs_entregas/static/js/main.12873ddb.js",
+    "static/js/787.4331e8b3.chunk.js": "/coderhouse_reactJs_entregas/static/js/787.4331e8b3.chunk.js",
+    "static/media/img-cocina-1.jpg": "/coderhouse_reactJs_entregas/static/media/img-cocina-1.b743e5ab1b73e9380123.jpg",
+    "index.html": "/coderhouse_reactJs_entregas/index.html",
+    "main.9c20d2cb.css.map": "/coderhouse_reactJs_entregas/static/css/main.9c20d2cb.css.map",
+    "main.12873ddb.js.map": "/coderhouse_reactJs_entregas/static/js/main.12873ddb.js.map",
+    "787.4331e8b3.chunk.js.map": "/coderhouse_reactJs_entregas/static/js/787.4331e8b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c20d2cb.css",
+    "static/js/main.12873ddb.js"
+  ]
+}
