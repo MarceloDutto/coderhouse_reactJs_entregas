@@ -1,21 +1,21 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Home from './Pages/Home';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import './App.css';
 
 
 function App() {
   return (
-    <div className='App-Container'>
-      
-        <header>
-          <NavBar />
-        </header>
-      
-        <div>
-          <ItemListContainer greeting='Tenemos a su disposicion muebles estandarizados y tambien a medida totalmente personalizados a su necesidad y gusto, contactenos por correo electronico o WhastApp para brindarle el presupuesto que desee.'/>
+    <BrowserRouter>
+        <div className='App-Container'>
+              <NavBar />
+              <Routes>
+                <Route exact path='/' element={ <Home />} />
+              </Routes>          
         </div>
-
-    </div>
+      </BrowserRouter>
   );
 }
 

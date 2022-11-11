@@ -1,12 +1,11 @@
-import React, { useEffect, useState} from "react";
+import React, { useState, useEffect } from "react";
 import data from "../../catalog/data.json"
-import ItemList from "../ItemList/ItemList";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
-
-const ItemListContainer = () => {
-    const [catalogo, setCatalogo] =  useState([]);
+const ItemDetailContainer = ( {id} ) => {
+    const [catalogo, setCatalogo] = useState([])
     const [loading, setLoading] = useState(true)
-    
+
     useEffect (() => {
         const getDB = new Promise((resolve,reject) => {
             setLoading(true)
@@ -22,16 +21,19 @@ const ItemListContainer = () => {
         })
     }, []);
 
+    const item = catalogo.find(obj => {
+        return obj.id === id;
+    });
 
     return (
-        <div className="ItemListContainer">
-            
+        <div className="containerDetail">
             {loading ? <h3 className="loadingMessage">Cargando...</h3>
             :
-            <ItemList productos={catalogo} />}
-            
+            <ItemDetail item={item} />
+            }
         </div>
     )
-}
+    
+} 
 
-export default ItemListContainer;
+export default ItemDetailContainer;
