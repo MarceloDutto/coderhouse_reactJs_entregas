@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "2a12651f1f3516cd7cf9",
-    "url": "/coderhouse_reactJs_entregas/static/css/main.9f2e4a7d.chunk.css"
+    "revision": "dac8671dd5da3a900f8c",
+    "url": "/coderhouse_reactJs_entregas/static/css/main.f077286d.chunk.css"
   },
   {
-    "revision": "2a12651f1f3516cd7cf9",
-    "url": "/coderhouse_reactJs_entregas/static/js/main.2a12651f.chunk.js"
+    "revision": "dac8671dd5da3a900f8c",
+    "url": "/coderhouse_reactJs_entregas/static/js/main.dac8671d.chunk.js"
   },
   {
     "revision": "c0d850e1296c0a3903a2",
     "url": "/coderhouse_reactJs_entregas/static/js/1.c0d850e1.chunk.js"
   },
   {
-    "revision": "23ee6aeb3dc7d4c65031",
-    "url": "/coderhouse_reactJs_entregas/static/js/2.23ee6aeb.chunk.js"
+    "revision": "1f0c59603d1a329cb78b",
+    "url": "/coderhouse_reactJs_entregas/static/js/2.1f0c5960.chunk.js"
   },
   {
     "revision": "3c69f069b78eb12cd673",
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "url": "/coderhouse_reactJs_entregas/static/media/sillon-3.edce7dab.jpg"
   },
   {
-    "revision": "63ed3060c987b039ae39e8989cf78342",
+    "revision": "a88ac958a639fabfc03c3af105b70216",
     "url": "/coderhouse_reactJs_entregas/index.html"
   }
 ];

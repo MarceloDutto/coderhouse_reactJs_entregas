@@ -1,11 +1,11 @@
 {
-  "main.css": "/coderhouse_reactJs_entregas/static/css/main.9f2e4a7d.chunk.css",
-  "main.js": "/coderhouse_reactJs_entregas/static/js/main.2a12651f.chunk.js",
-  "main.js.map": "/coderhouse_reactJs_entregas/static/js/main.2a12651f.chunk.js.map",
+  "main.css": "/coderhouse_reactJs_entregas/static/css/main.f077286d.chunk.css",
+  "main.js": "/coderhouse_reactJs_entregas/static/js/main.dac8671d.chunk.js",
+  "main.js.map": "/coderhouse_reactJs_entregas/static/js/main.dac8671d.chunk.js.map",
   "static/js/1.c0d850e1.chunk.js": "/coderhouse_reactJs_entregas/static/js/1.c0d850e1.chunk.js",
   "static/js/1.c0d850e1.chunk.js.map": "/coderhouse_reactJs_entregas/static/js/1.c0d850e1.chunk.js.map",
-  "static/js/2.23ee6aeb.chunk.js": "/coderhouse_reactJs_entregas/static/js/2.23ee6aeb.chunk.js",
-  "static/js/2.23ee6aeb.chunk.js.map": "/coderhouse_reactJs_entregas/static/js/2.23ee6aeb.chunk.js.map",
+  "static/js/2.1f0c5960.chunk.js": "/coderhouse_reactJs_entregas/static/js/2.1f0c5960.chunk.js",
+  "static/js/2.1f0c5960.chunk.js.map": "/coderhouse_reactJs_entregas/static/js/2.1f0c5960.chunk.js.map",
   "runtime~main.js": "/coderhouse_reactJs_entregas/static/js/runtime~main.3c69f069.js",
   "runtime~main.js.map": "/coderhouse_reactJs_entregas/static/js/runtime~main.3c69f069.js.map",
   "static/media/img-cocina-1.jpg": "/coderhouse_reactJs_entregas/static/media/img-cocina-1.49f288d3.jpg",
@@ -38,8 +38,8 @@
   "static/media/sillon-1.jpg": "/coderhouse_reactJs_entregas/static/media/sillon-1.321b96ed.jpg",
   "static/media/sillon-2.jpg": "/coderhouse_reactJs_entregas/static/media/sillon-2.66b5ab47.jpg",
   "static/media/sillon-3.jpg": "/coderhouse_reactJs_entregas/static/media/sillon-3.edce7dab.jpg",
-  "static/css/main.9f2e4a7d.chunk.css.map": "/coderhouse_reactJs_entregas/static/css/main.9f2e4a7d.chunk.css.map",
+  "static/css/main.f077286d.chunk.css.map": "/coderhouse_reactJs_entregas/static/css/main.f077286d.chunk.css.map",
   "index.html": "/coderhouse_reactJs_entregas/index.html",
-  "precache-manifest.240138ee788ba29cdc6aa2c4938b0700.js": "/coderhouse_reactJs_entregas/precache-manifest.240138ee788ba29cdc6aa2c4938b0700.js",
+  "precache-manifest.bdda4467428cdc9b037035e1ab102472.js": "/coderhouse_reactJs_entregas/precache-manifest.bdda4467428cdc9b037035e1ab102472.js",
   "service-worker.js": "/coderhouse_reactJs_entregas/service-worker.js"
 }
