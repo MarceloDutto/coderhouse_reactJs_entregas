@@ -22,6 +22,11 @@ ul {
   list-style: none;
 }
 
+li {
+  text-decoration: none;
+  color: #012C3D;
+}
+
 a {
   text-decoration: none;
 }
@@ -102,6 +107,7 @@ body {
   display: flex;
   height: 100%;
   align-items: center;
+  color: #012C3D;
 
 }
 

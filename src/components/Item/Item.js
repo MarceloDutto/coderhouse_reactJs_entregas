@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Item = ( { prod } ) => {  
     const {id, nombre, precio, imagen} = prod
+    const navigate = useNavigate()
+    const goToDetails = () => {
+        navigate(`/item/${id}`, {state: prod});
+    }
 
     return (
     <div className="cardContainer">
@@ -11,9 +16,7 @@ const Item = ( { prod } ) => {
             <img className="cardImage" src={require(`../../catalog/imagenes/${imagen}.jpg`)} alt={nombre} />
         </div>
         <div className="cardInfo">
-            <Link to={`/Item/${id}`}>
-            <h3 className="cardName"> {nombre} </h3>
-            </Link>
+            <h3 className="cardName" onClick={goToDetails}> {nombre} </h3>
             <p className="cardPrice"> $ {precio} </p>
         </div>
     </div>
