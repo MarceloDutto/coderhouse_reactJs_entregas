@@ -8,7 +8,7 @@ const ItemDetail = ( {item} ) => {
         <div className="itemDetailContainer">
             <div className="item">
                 <div className="itemDetailImageContainer">
-                    <img className="itemDetailImage" src={require(`../../catalog/imagenes/${imagen}.jpg`)} alt={nombre} />
+                    <img className="itemDetailImage" src={imagen} alt={nombre} />
                 </div>
                 <div className="itemPanel">
                     <div className="itemInfo">
@@ -35,7 +35,7 @@ const ItemDetail = ( {item} ) => {
                 <p>Trabajamos sin stock, este producto cuenta con un tiempo estimado de 30 dias de fabricación.</p>
                 <p>Saquese todas las dudas que tenga antes de realizar la compra.</p>
                 <strong className="featuresTitle">Para presupuestos contactarse por:</strong>
-                <strong className="featuresTitle">Whatsapp: +5491112356578</strong>
+                <strong className="featuresTitle">Whatsapp: +54 9 11 12356578</strong>
                 <strong className="featuresTitle">Mail: info@ebanomuebles.com.ar</strong>
             </div>
         </div>

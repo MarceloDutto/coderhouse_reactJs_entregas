@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import CartWidget from './CartWidget';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     const [header, setHeader] =useState("NavbarContainer")
@@ -20,55 +20,58 @@ const NavBar = () => {
             window.removeEventListener('scroll', listenScrollEvent);
     }, []);
 
+
         return (
             <div className={header}>
                 <div className="NavbarContent App-Container">
                     <div className="logo">
-                        <Link to="/">
+                        <Link to="/" >
                             <h1>ÉBANO MUEBLES</h1>
                         </Link>
                     </div>
                     <nav className="nav">
                         <ul className="navMenu">
-                            <Link to="/">
-                            <li className="navItem active">
-                                Inicio
-                            </li>
-                            </Link>
-                            <Link to="/productos">
-                            <li className="navItem dropdown">
-                                Productos
-                                
-                                <div className="navCategories">
-                                    <ul>
-                                        <Link to="/categoria/escritorios">
-                                            <li className="navItem">Escritorios</li>
-                                        </Link>
-                                        <Link to="/categoria/estanterias">
-                                            <li className="navItem">Estanterías</li>
-                                        </Link>
-                                        <Link to="/categoria/racks">
-                                            <li className="navItem">Rack para TV</li>
-                                        </Link>
-                                        <Link to="/categoria/mesasratonas">
-                                            <li className="navItem">Mesa ratona</li>
-                                        </Link>
-                                        <Link to="/categoria/comedor">
-                                            <li className="navItem">Mesa de comedor</li>
-                                        </Link>
-                                        <Link to="/categoria/sillas">
-                                            <li className="navItem">Sillas</li>
-                                        </Link>
-                                        <Link to="/categoria/sillones">
-                                            <li className="navItem">Sillones</li>
-                                        </Link>
-                                    </ul>
-                                </div>
-                            </li>
-                            </Link>
-                            <li className="navItem">
-                                Contacto
-                            </li>
+                            <NavLink to="/" className={(navActive) =>  navActive.isActive ? 'active' : '' } >
+                                <li className="navItem" >
+                                    Inicio
+                                </li>
+                            </NavLink>
+                            <NavLink to="/productos" className={(navActive) =>  navActive.isActive ? 'active' : '' } >
+                                <li className="navItem dropdown" >
+                                    Productos
+                                    
+                                    <div className="navCategories">
+                                        <ul>
+                                            <NavLink to="/categoria/escritorios">
+                                                <li className="navItemCategory">Escritorios</li>
+                                            </NavLink>
+                                            <NavLink to="/categoria/estanterias">
+                                                <li className="navItemCategory">Estanterías</li>
+                                            </NavLink>
+                                            <NavLink to="/categoria/racks">
+                                                <li className="navItemCategory">Rack para TV</li>
+                                            </NavLink>
+                                            <NavLink to="/categoria/mesasratonas">
+                                                <li className="navItemCategory">Mesas ratonas</li>
+                                            </NavLink>
+                                            <NavLink to="/categoria/comedor">
+                                                <li className="navItemCategory">Mesas de comedor</li>
+                                            </NavLink>
+                                            <NavLink to="/categoria/sillas">
+                                                <li className="navItemCategory">Sillas</li>
+                                            </NavLink>
+                                            <NavLink to="/categoria/sillones">
+                                                <li className="navItemCategory">Sillones</li>
+                                            </NavLink>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </NavLink>
+                            <NavLink to="/contacto" className={(navActive) =>  navActive.isActive ? 'active' : '' } >
+                                <li className="navItem" >
+                                    Contacto
+                                </li>
+                            </NavLink>
                         </ul>
                     </nav>
                     <div className="cartWidget">
