@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { CartContext } from "../Context/CartContext.jsx";
 import ItemCount from "../ItemCount/ItemCount";
+
 
 const ItemDetail = ( {item} ) => {
     const {id, imagen, nombre, precio, caracteristicas, ancho, alto, profundidad} = item;
+    const { cartContent, addToCart } = useContext(CartContext);
+    const [amount, setAmount] = useState(1);
 
+    const handleAmount = num => {
+        setAmount(num);
+    }
+    
+    
     return (
         <div className="itemDetailContainer">
             <div className="item">
@@ -13,11 +22,11 @@ const ItemDetail = ( {item} ) => {
                 <div className="itemPanel">
                     <div className="itemInfo">
                         <p className="itemDetailNombre"> {nombre} </p>
-                        <p className="itemDetailPrecio"> $ {precio} </p>
+                        <p className="itemDetailPrecio"> {Intl.NumberFormat("es-AR", {currency: "ARS", style:"currency"}).format(precio)} </p>
                     </div>
                     <div className="itemTransaction">
-                        <ItemCount start={1} max={10} />
-                        <button className="btn-AddToCart">Agregar al carrito</button>
+                        <ItemCount start={1} max={5} handleAmount={handleAmount} />
+                        <button className="btn-AddToCart" onClick={() => {addToCart(item, amount)} }>Agregar al carrito</button>
                     </div>
                 </div>
             </div>

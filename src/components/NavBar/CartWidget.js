@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import cartIcon from './CartIcon.png';
+import { CartContext } from "../Context/CartContext";
 
 const cartWidget = () => {
+    const { cartTotalItemsAmount } = useContext(CartContext)
     return (
         <div className="cartIcon">
             <img src={ cartIcon } alt="cart-icon" ></img>
-            <p className="cartNotification">0</p>
+            <p className="cartNotification"> { cartTotalItemsAmount() } </p>
         </div>
     )
 }

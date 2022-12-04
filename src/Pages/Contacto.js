@@ -1,11 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import contactImage from './contacto.jpg'
 import iconPhone from './icon-phone.png'
 import iconEmail from './icon-email.png'
 import iconLocation from './icon-location.png'
+import Loader from "../components/Loader/Loader";
 
 const Contacto = () => {
-    return (
+    const [loading, setLoading] = useState(true)
+    setTimeout(() => {
+        setLoading(false)
+    }, 1000);
+
+    return (loading ?
+            <Loader />
+            :
         <div className="contacto-container">
             <div className="contact-image-div">
                 <img src={contactImage} className="contact-image" alt="contacto"></img>

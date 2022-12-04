@@ -21,7 +21,9 @@ const ItemListContainer = () => {
             }
             setCatalogo(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         }) .finally (
-            setLoading(false)
+                setTimeout(() => {
+                    setLoading(false)
+                }, 2000)
         )
     }, [categoryId]);
 

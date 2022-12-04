@@ -3,13 +3,13 @@ import CartWidget from './CartWidget';
 import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
-    const [header, setHeader] =useState("NavbarContainer")
+    const [headerClass, setHeaderClass] =useState("navbarContainer")
 
     const listenScrollEvent = (e) => {
         if(window.scrollY < 73) {
-            return setHeader("NavbarContainer")
+            return setHeaderClass("navbarContainer")
         }else if (window.scrollY > 70) {
-            return setHeader("Navbar-Fixed")
+            return setHeaderClass("navbar-fixed")
         }
     } 
 
@@ -22,8 +22,8 @@ const NavBar = () => {
 
 
         return (
-            <div className={header}>
-                <div className="NavbarContent App-Container">
+            <div className={headerClass}>
+                <div className="navbarContent App-Container">
                     <div className="logo">
                         <Link to="/" >
                             <h1>ÉBANO MUEBLES</h1>
@@ -42,25 +42,25 @@ const NavBar = () => {
                                     
                                     <div className="navCategories">
                                         <ul>
-                                            <NavLink to="/categoria/escritorios">
+                                            <NavLink to="productos/escritorios">
                                                 <li className="navItemCategory">Escritorios</li>
                                             </NavLink>
-                                            <NavLink to="/categoria/estanterias">
+                                            <NavLink to="/productos/estanterias">
                                                 <li className="navItemCategory">Estanterías</li>
                                             </NavLink>
-                                            <NavLink to="/categoria/racks">
+                                            <NavLink to="/productos/racks">
                                                 <li className="navItemCategory">Rack para TV</li>
                                             </NavLink>
-                                            <NavLink to="/categoria/mesasratonas">
+                                            <NavLink to="/productos/mesasratonas">
                                                 <li className="navItemCategory">Mesas ratonas</li>
                                             </NavLink>
-                                            <NavLink to="/categoria/comedor">
+                                            <NavLink to="/productos/comedor">
                                                 <li className="navItemCategory">Mesas de comedor</li>
                                             </NavLink>
-                                            <NavLink to="/categoria/sillas">
+                                            <NavLink to="/productos/sillas">
                                                 <li className="navItemCategory">Sillas</li>
                                             </NavLink>
-                                            <NavLink to="/categoria/sillones">
+                                            <NavLink to="/productos/sillones">
                                                 <li className="navItemCategory">Sillones</li>
                                             </NavLink>
                                         </ul>
@@ -75,8 +75,11 @@ const NavBar = () => {
                         </ul>
                     </nav>
                     <div className="cartWidget">
-                        <CartWidget/>
-                    </div>   
+                        <Link to="/cart" >
+                            <CartWidget/>
+                        </Link>
+                    </div>
+                       
                 </div>        
             </div>
     )

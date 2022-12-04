@@ -15,7 +15,7 @@ const Item = ( { prod } ) => {
             <Link to={`/item/${id}`}>
                 <h3 className="cardName"> {nombre} </h3>
             </Link>
-            <p className="cardPrice"> $ {precio} </p>
+            <p className="cardPrice"> {Intl.NumberFormat("es-AR", {currency: "ARS", style:"currency"}).format(precio)} </p>
         </div>
     </div>
     )

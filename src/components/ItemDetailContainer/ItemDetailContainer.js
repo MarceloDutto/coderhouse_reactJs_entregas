@@ -20,7 +20,9 @@ const ItemDetailContainer = () => {
                 setItem({ id: snapshot.id, ...snapshot.data() });
             }
         }).finally (
-            setLoading(false)
+            setTimeout(() => {
+                setLoading(false)
+            }, 1000)
         )
         
     }, [itemId]); 
