@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# E-commerce: Ebano muebles 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es el trabajo final del curso sobre React de Coderhouse. Fue creado con [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts disponibles
 
-In the project directory, you can run:
+Se pueden ejecutar en el directorio del proyecto:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Corre la aplicacion en modo de desarrollo.\
+Abra [http://localhost:3000](http://localhost:3000) para verla en el navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejecuta el test runner en modo de inteaccion.\
+Consulte la informacion sobre [ejecutar tests.](https://facebook.github.io/create-react-app/docs/running-tests)
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Monta en formato de produccion la aplicacion en la carpeta `build`.\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Pre-requisitos
 
-### `npm run eject`
+    - [Visual Studio Code](https://code.visualstudio.com/)
+    - [Node.js](https://nodejs.org/es/) y npm en version superior a la 16.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Estructura de carpetas y archivos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - La carpeta `src` contiene todo el codigo correspondiente a la aplicacion de React, y contiene toda la funcionalidad de la misma.
+        - La carpeta `components` almacena todos los componentes que forman parte de la aplicacion, tales como la cabecera y el NavBar, el footer, los componentes contenedores, los contextos y la funcionalidad del carrito de compras; así como los componentes de UI que muestran los productos y permiten la interaccion del usuario.
+    - En la carpeta `Pages` se encuentran las secciones principales de la aplicacion entres las cuales se puede navegar para acceder a las propiedades disponibles.
+    - La carpeta `images` alberga las imagenes e iconos uitlizados en el UI de la aplicacion.
+    - En `Services` se pueden encontrar los componentes que configuran el acceso a la base de datos de Firestore, la cual almacena los productos mostrados en la tienda, y guarda las ordenes de los usuarios que realizaron una compra.
+    - Los archivos de estilo `.css` se encuentran en las carpetas correspondientes a cada componente, en adicion al archivo principal `App.css`ubicado en la raiz del proyecto.
+    - El archivo `App.js` es el punto de inicio de la aplicacion de React.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Funcionalidad y caracteristicas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+La aplicacion simula la tienda en la nube de una muebleria llamada "Muebles Ebano. La app cuenta con tres secciones principales, una correspondiente a la pagina de inicio, otra a la de visualizacion de productos y la ultima que permite al usuario contactarse con la empresa. Se puede acceder al catalogo de productos, ver las caracteristicas de cada uno de ellos, agregarlo al carrito y realizar la simulacion de una compra. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se implemento Firestore de Firebase para almacenar la coleccion de productos, a la cual se realizan las consultas necesarias para acceder a la informacion. Una vez confirmada la compra se almacenan en otra coleccion los documentos con la descripcion de la compra realizada.
 
-### Code Splitting
+Se utilizaron diversos componentes para generar el UI y implementar el codigo que permite la funcionalidad de la App. Se uitlizaron los principales recurso de React, tales como los hooks, los contextos, los Routers para la navegacion y diferentes tecnicas de rendering condicionales.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El resultado es un simulador de una tienda con todas las funcionalidades comunes correspondientes a un e-commerce.
