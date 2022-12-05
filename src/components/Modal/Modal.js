@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
+import './Styles.css';
 
 const Modal = ({ showModal, setShowModal, orderId }) => {
     const { clearCart } = useContext(CartContext)
@@ -16,7 +17,7 @@ const Modal = ({ showModal, setShowModal, orderId }) => {
                         <div className="modal-notification">
                             <h3>¡La compra fue realizada con éxito!</h3>
                             <p>Nos comunicaremos a la brevedad para coordinar la entrega</p>
-                            <p>Puede hacer seguimiento del pedido con su número de orden:</p>
+                            <p>Puede hacer seguimiento del pedido con su codigo de la orden:</p>
                             <p> {orderId} </p>
                         </div>
                         <div className="modal-button">

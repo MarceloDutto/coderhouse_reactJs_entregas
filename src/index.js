@@ -7,7 +7,7 @@ import { initializeApp } from "firebase/app";
 import { firebaseConfig } from './Services/firebase';
 
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

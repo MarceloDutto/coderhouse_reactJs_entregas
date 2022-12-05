@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pagoImg from './mediosDePago.png';
-import iconPhone from '../../Pages/icon-phone.png';
-import iconEmail from '../../Pages/icon-email.png'
-import iconLocation from '../../Pages/icon-location.png'
+import pagoImg from '../../images/mediosDePago.png';
+import iconPhone from '../../images/icon-phone.png';
+import iconEmail from '../../images/icon-email.png';
+import iconLocation from '../../images/icon-location.png';
+import './Styles.css';
 
 const Footer = () => {
     return (
@@ -28,15 +29,15 @@ const Footer = () => {
                 <div className="footer-column">
                     <h3 className="footer-title">Contactanos</h3>
                     <div className="footer-contact">
-                        <img src={ iconPhone } className="icon"></img>
+                        <img src={ iconPhone } className="icon" alt=""></img>
                         <p className="footer-item">+54 9 11 12356578</p>
                     </div>
                     <div className="footer-contact">
-                        <img src={ iconEmail } className="icon"></img>
+                        <img src={ iconEmail } className="icon" alt=""></img>
                         <p className="footer-item">info@ebanomuebles.com.ar</p>
                     </div>
                     <div className="footer-contact">
-                        <img src={ iconLocation } className="icon"></img>
+                        <img src={ iconLocation } className="icon" alt=""></img>
                         <p className="footer-item">Buenos Aires - Argentina</p>
                     </div> 
                 </div>

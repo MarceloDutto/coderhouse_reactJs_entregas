@@ -3,7 +3,7 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 
 const Productos = () => {
     return (
-        <ItemListContainer />
+        <ItemListContainer limitted={false}/>
     )
 
 }

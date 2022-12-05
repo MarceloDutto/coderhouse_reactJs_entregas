@@ -3,6 +3,8 @@ import OrderForm from "./OrderForm";
 import Modal from "../Modal/Modal";
 import { CartContext } from "../Context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import './Styles.css';
+
 
 
 
@@ -13,7 +15,7 @@ const Checkout = () => {
     const [phone, setPhone] = useState('');
     const [showModal, setShowModal] = useState(false);
     const { cartContent, cartTotalPrice } = useContext(CartContext);
-
+    
     
     const createOrder = (e) => {
         e.preventDefault()

@@ -1,19 +1,15 @@
 import React, {useState} from "react";
-import contactImage from './contacto.jpg'
-import iconPhone from './icon-phone.png'
-import iconEmail from './icon-email.png'
-import iconLocation from './icon-location.png'
-import Loader from "../components/Loader/Loader";
+import contactImage from '../images/contacto.jpg';
+import iconPhone from '../images/icon-phone.png';
+import iconEmail from '../images/icon-email.png';
+import iconLocation from '../images/icon-location.png';
+import './Contacto.css';
+
 
 const Contacto = () => {
-    const [loading, setLoading] = useState(true)
-    setTimeout(() => {
-        setLoading(false)
-    }, 1000);
-
-    return (loading ?
-            <Loader />
-            :
+    const [submitted, setSubmitted] = useState(false);
+   
+    return (
         <div className="contacto-container">
             <div className="contact-image-div">
                 <img src={contactImage} className="contact-image" alt="contacto"></img>
@@ -25,38 +21,47 @@ const Contacto = () => {
             <div className="contact-info-container">
                 <div className="column">
                     <div className="row">
-                        <img src={ iconPhone } className="icon"></img>
+                        <img src={ iconPhone } className="icon" alt=""></img>
                         <h3>+54 9 11 12356578</h3>
                     </div>
                     <div className="row">
-                        <img src={ iconEmail } className="icon"></img>
+                        <img src={ iconEmail } className="icon" alt=""></img>
                         <h3>info@ebanomuebles.com.ar</h3>
                     </div>
                     <div className="row">
-                        <img src={ iconLocation } className="icon"></img>
+                        <img src={ iconLocation } className="icon" alt=""></img>
                         <h3>Buenos Aires - Argentina</h3>
                     </div> 
                 </div>
                 <div className="column">
-                    <form className="contact-form">
-                        <div className="form-row">
-                            <label>Nombre</label>
-                            <input></input>
+                    {submitted ?
+                        <div className="submitted-container">
+                            <div className="submitted-text">
+                                <h3>¡Su mensaje fue enviado!</h3>
+                                <p>Nos pondremos en contacto a la brevedad.</p>
+                            </div>
                         </div>
-                        <div className="form-row">
-                            <label>Email</label>
-                            <input type="email"></input>
-                        </div>
-                        <div className="form-row">
-                            <label>Teléfono</label>
-                            <input></input>
-                        </div>
-                        <div className="form-row">
-                            <label>Mensaje</label>
-                            <textarea rows="8"></textarea>
-                        </div>
-                        <button className="form-button">Enviar</button>
-                    </form>
+                        :
+                        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                            <div className="form-row">
+                                <label>Nombre</label>
+                                <input></input>
+                            </div>
+                            <div className="form-row">
+                                <label>Email</label>
+                                <input type="email"></input>
+                            </div>
+                            <div className="form-row">
+                                <label>Teléfono</label>
+                                <input></input>
+                            </div>
+                            <div className="form-row">
+                                <label>Mensaje</label>
+                                <textarea rows="8"></textarea>
+                            </div>
+                            <button className="form-button" onClick={()=> setSubmitted(true) }>Enviar</button>
+                        </form>
+                    }
                 </div>
             </div>
         </div>

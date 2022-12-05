@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import removeImage from './remove.png'
+import removeImage from '../../images/remove.png'
+import './Styles.css';
 
 const CartItem = ( {item, removeItem} ) => {
     const { id, nombre, imagen, precio, quantity } = item;
@@ -23,7 +24,7 @@ const CartItem = ( {item, removeItem} ) => {
                     <h3> {Intl.NumberFormat("es-AR", {currency: "ARS", style:"currency"}).format(precio * quantity)} </h3>
                 </div>
                 <div className="cartItem-remove">
-                    <img src={removeImage} onClick={() => removeItem()}></img>
+                    <img src={removeImage} onClick={() => removeItem()} alt="boton para remover producto del carrito" ></img>
                 </div>
             </div>  
         </div>

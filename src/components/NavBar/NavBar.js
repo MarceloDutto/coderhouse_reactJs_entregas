@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from "react";
 import CartWidget from './CartWidget';
 import { Link, NavLink } from 'react-router-dom';
+import './Styles.css';
 
 const NavBar = () => {
-    const [headerClass, setHeaderClass] =useState("navbarContainer")
+    const [headerClass, setHeaderClass] =useState("navbarContainer transition-soft")
 
     const listenScrollEvent = (e) => {
-        if(window.scrollY < 73) {
-            return setHeaderClass("navbarContainer")
-        }else if (window.scrollY > 70) {
-            return setHeaderClass("navbar-fixed")
+        if(window.scrollY < 10) {
+            return setHeaderClass("navbarContainer transition-soft")
+        }else if (window.scrollY > 13) {
+            return setHeaderClass("navbar-fixed transition-soft")
         }
     } 
 
@@ -22,8 +23,9 @@ const NavBar = () => {
 
 
         return (
+            <div className="headerContainer transition-soft">
             <div className={headerClass}>
-                <div className="navbarContent App-Container">
+                <div className="navbarContent transition-soft">
                     <div className="logo">
                         <Link to="/" >
                             <h1>ÉBANO MUEBLES</h1>
@@ -81,6 +83,7 @@ const NavBar = () => {
                     </div>
                        
                 </div>        
+            </div>
             </div>
     )
 }

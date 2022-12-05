@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext.jsx";
 import ItemCount from "../ItemCount/ItemCount";
+import './Styles.css';
 
 
 const ItemDetail = ( {item} ) => {
-    const {id, imagen, nombre, precio, caracteristicas, ancho, alto, profundidad} = item;
-    const { cartContent, addToCart } = useContext(CartContext);
+    const { imagen, nombre, precio, caracteristicas, ancho, alto, profundidad } = item;
+    const { addToCart } = useContext(CartContext);
     const [amount, setAmount] = useState(1);
 
     const handleAmount = num => {

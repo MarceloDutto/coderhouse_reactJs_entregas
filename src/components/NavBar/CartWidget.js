@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import cartIcon from './CartIcon.png';
+import cartIcon from '../../images/CartIcon.png';
 import { CartContext } from "../Context/CartContext";
 
 const cartWidget = () => {

@@ -1,0 +1,145 @@
+/* HEADER Y NAVBAR*/
+
+.headerContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .navbarContainer {
+    position: fixed;
+    top: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #F7F8F3;
+  }
+  
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #F7F8F3;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  }
+  
+  .transition-soft {
+    transition: all .5 ease;
+  }
+  
+  .navbarContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  
+  /* Logo*/
+  
+  .logo {
+    max-width: 200px;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    
+  }
+  
+  .logo h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-left: 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: #012C3D;
+  
+  }
+  
+  /* Nav Menu*/
+  
+  .nav .navMenu {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .navItem {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 35px;
+    cursor: pointer;
+  }
+  
+  .navItem:hover {
+    color: #012c3d73;
+  }
+  
+  .active .navItem {
+    border-bottom: 1px solid #012C3D;
+    padding-bottom: 5px;
+    border-top: 1px solid #012C3D;
+    padding-top: 4px;
+  }
+  
+  .navCategories {
+    display: none;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    background-color: #F7F8F3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .navItemCategory {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 35px;
+    cursor: pointer;
+  }
+  
+  .dropdown:hover .navCategories {
+    display: block;
+  }
+  
+  .navItemCategory {
+    color: #012C3D;
+  }
+  
+  .navItemCategory:hover {
+    color: #012C3D73;
+  }
+  
+  
+  
+  /* Widget Carrito */
+  
+  .cartIcon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    align-content: center;
+    padding: 0 20px
+  }
+  
+  .cartIcon img {
+    width: 32px;
+  }
+  
+  .cartNotification {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #012C3D;
+    color: #f7f8f3;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }

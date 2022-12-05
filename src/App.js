@@ -10,16 +10,14 @@ import Cart from './components/Cart/Cart';
 import Checkout from './components/Cart/Checkout';
 import Contacto from './Pages/Contacto';
 import './App.css';
-import Modal from './components/Modal/Modal';
-
 
 
 function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
+        <NavBar />
           <div className='App-Container'>
-                <NavBar />
                 <Routes>
                   <Route exact path='/' element={ <Home /> } />
                   <Route exact path='/productos' element={ <Productos /> } />
@@ -28,9 +26,9 @@ function App() {
                   <Route exact path='/cart' element = { <Cart /> } />
                   <Route exact path='/checkout' element = { <Checkout />} />
                   <Route exact path='/contacto' element={ <Contacto /> } />
-                </Routes>
-                <Footer />          
+                </Routes>          
           </div>
+        <Footer />
       </BrowserRouter>
     </CartContextProvider>
   );
